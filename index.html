@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ed">
+  <title>Una cita contigo ♡</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
+    :root{--paper:#f8f5ed;--ink:#354b3e;--muted:#787d6e;--line:#dddccc;--rose:#ae645e;--green:#46664e}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:14px;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%238b8060' opacity='.035' filter='url(%23n)' d='M0 0h160v160H0z'/%3E%3C/svg%3E")}
+    button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--rose);outline-offset:5px}
+    .top{max-width:1120px;margin:auto;padding:27px 32px;display:flex;justify-content:space-between;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:2px;text-transform:uppercase}.top span:last-child{color:var(--rose)}
+    main{max-width:870px;margin:auto;padding:52px 28px 0}.hero{text-align:center;position:relative}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose);font-weight:600}.flower{width:55px;height:67px;margin:0 auto 13px}h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:76px;line-height:1.03;letter-spacing:-3px;margin:18px 0}h1 em{font-weight:400;color:var(--rose)}.intro{line-height:1.9;color:var(--muted);max-width:415px;margin:21px auto 0}.note{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:var(--rose);margin-top:18px}.divider{display:flex;align-items:center;gap:18px;justify-content:center;margin:35px auto;color:#a1a88d;max-width:250px}.divider:before,.divider:after{content:'';height:1px;background:var(--line);flex:1}
+    .section-head{display:flex;align-items:center;gap:13px;margin-bottom:19px}.number{border:1px solid #c8ccb9;border-radius:50%;width:27px;height:27px;display:grid;place-items:center;font-size:10px;color:var(--muted)}h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:500;margin:0}.hint{margin-left:auto;font-size:11px;color:var(--muted)}.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.choice{background:#fcfaf5;border:1px solid var(--line);border-radius:5px;padding:0;text-align:left;cursor:pointer;position:relative;color:var(--ink);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}.choice:hover{transform:translateY(-4px);border-color:#9da78c}.choice[aria-pressed=true]{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}.check{position:absolute;right:15px;top:15px;border:1px solid #a9af99;background:#fcfaf5;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;color:transparent;z-index:1}.choice[aria-pressed=true] .check{background:var(--green);color:white;border-color:var(--green)}.art{height:190px;display:block;width:100%;background:#eeeede}.choice:nth-child(2) .art{background:#f1e7db}.card-copy{padding:21px 24px 25px}.tag{font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.card-copy h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:500;margin:7px 0}.card-copy p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}.series-section{margin-top:34px}.series{display:grid;grid-template-columns:145px 1fr;gap:25px;align-items:center;border:1px solid var(--line);border-radius:5px;padding:17px;background:#f0f0e5}.poster{height:168px;background:radial-gradient(ellipse at 25% 20%,#b5aa78 0,transparent 44%),radial-gradient(ellipse at 90% 75%,#65805d 0,transparent 50%),#253f32;border-radius:3px;text-align:center;display:flex;flex-direction:column;justify-content:center;color:#fff9e5;position:relative;overflow:hidden}.poster:before{content:'❧';font-size:145px;position:absolute;opacity:.13;left:8px;top:13px}.poster small{font-size:8px;letter-spacing:3px;color:#eed8aa}.poster strong{font-family:Georgia,serif;font-size:38px;font-weight:400;letter-spacing:-2px;margin-top:7px}.poster span{font-family:Georgia,serif;font-size:13px}.series h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;font-weight:500;margin:0 0 8px}.series p{color:var(--muted);font-size:12px;line-height:1.8;margin:0 0 16px}.pills{display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid #c8cdbc;border-radius:30px;padding:9px 15px;background:transparent;color:var(--ink);font-size:11px;cursor:pointer}.pill[aria-pressed=true]{background:var(--green);border-color:var(--green);color:white}.send-area{text-align:center;margin:32px 0 0}.summary{font-size:12px;color:var(--muted);min-height:18px;margin-bottom:15px}.send{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:0;border-radius:4px;padding:17px 32px;background:var(--green);color:white;font-size:13px;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s}.send:hover{background:#344e3a;transform:translateY(-2px)}.send svg{width:18px;height:18px}.privacy{font-size:10px;color:var(--muted);margin-top:12px}footer{text-align:center;margin:39px 0 0;border-top:1px solid var(--line);padding:24px 10px 28px;font-size:10px;color:var(--muted);letter-spacing:1px}footer span{color:var(--rose)}.error{color:var(--rose)}.heart{position:fixed;pointer-events:none;color:var(--rose);animation:float 1.5s ease-out forwards;z-index:4}@keyframes float{to{transform:translateY(-100px) rotate(20deg);opacity:0}}@media(min-width:1000px){main{padding-top:43px}.hero:before,.hero:after{content:'❧';position:absolute;font-size:130px;color:#9aa487;opacity:.45;top:66px;transform:rotate(-32deg)}.hero:before{left:5px}.hero:after{right:5px;transform:scaleX(-1) rotate(-32deg)}}@media(max-width:600px){.top{padding:20px;font-size:8px;letter-spacing:1.4px}main{padding:32px 19px 0}h1{font-size:58px}.intro{font-size:13px}.choices{grid-template-columns:1fr;gap:16px}.art{height:145px}.card-copy{padding:17px 14px}.card-copy h3{font-size:24px}.card-copy p{font-size:11px}.tag{font-size:8px;letter-spacing:1.4px}h2{font-size:25px}.hint{font-size:9px}.series{grid-template-columns:105px 1fr;gap:15px;padding:12px}.poster{height:166px}.poster strong{font-size:31px}.series h3{font-size:23px}.pill{font-size:10px;padding:8px 11px}.send{width:100%}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+    .choice{height:100%}.choice:nth-child(3) .art{background:#e5ece3}.poster-photo{display:block;width:100%;height:auto;border-radius:3px}
+    /* Flexible layout, including narrow phones and enlarged text. */
+    html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    main{width:100%;padding-inline:clamp(16px,4vw,28px)}
+    .top{gap:12px 24px;flex-wrap:wrap;line-height:1.7;padding-inline:clamp(16px,4vw,32px)}
+    .top span{min-width:0;overflow-wrap:anywhere}
+    h1{font-size:clamp(42px,8.5vw,76px);letter-spacing:-.035em;overflow-wrap:break-word}
+    h2{font-size:clamp(24px,3.5vw,28px)}
+    .intro,.note,.summary,.privacy,footer{overflow-wrap:break-word}
+    .section-head{flex-wrap:wrap;gap:10px 12px}
+    .number{flex:0 0 27px}
+    .section-head h2{flex:1;min-width:0}
+    .hint{flex-basis:100%;margin-left:39px;font-size:11px}
+    .choice{display:flex;flex-direction:column;min-width:0}
+    .art{height:auto;aspect-ratio:2/1;flex:none}
+    .card-copy{padding:20px;overflow-wrap:break-word}
+    .card-copy h3{font-size:clamp(25px,3.4vw,28px);line-height:1.15}
+    .card-copy p,.series p{font-size:13px}
+    .tag{font-size:10px;letter-spacing:1.3px;line-height:1.7}
+    .series{grid-template-columns:minmax(105px,145px) minmax(0,1fr)}
+    .series>div{min-width:0}
+    .poster-photo{max-width:100%;object-fit:contain}
+    .pill{min-height:44px;max-width:100%;font-size:12px;line-height:1.5;white-space:normal}
+    .send{min-height:50px;max-width:100%;line-height:1.5;padding-inline:clamp(16px,4vw,32px)}
+    .send svg{flex-shrink:0}
+    .summary{line-height:1.7}.privacy,footer{font-size:11px;line-height:1.8}
+    footer{padding-bottom:max(28px,env(safe-area-inset-bottom))}
+    @media(min-width:601px) and (max-width:799px){
+      .choices{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .choice:last-child{grid-column:1/-1;width:calc((100% - 16px)/2);justify-self:center}
+    }
+    @media(max-width:600px){
+      .choices{grid-template-columns:minmax(0,1fr)}
+      .intro{font-size:14px}.intro br,.series p br{display:none}
+      .card-copy{padding:20px}.art{max-height:210px}
+      .top{font-size:9px}.note{font-size:20px}
+    }
+    @media(max-width:420px){
+      .top{justify-content:center;text-align:center;gap:6px}
+      .top span{flex-basis:100%}
+      .series{grid-template-columns:minmax(0,1fr);padding:20px;gap:20px}
+      .poster-photo{width:min(100%,180px);justify-self:center}
+      .series h3,.series p{text-align:center}
+      .pills{flex-direction:column}.pill{width:100%}
+      .eyebrow{font-size:9px;letter-spacing:2px;line-height:1.8}
+    }
+    @media(hover:none){.choice:hover,.send:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <header class="top"><span>Para mi persona favorita</span><span>Una invitación solo para ti ♡</span></header>
+  <main>
+    <section class="hero">
+      <svg class="flower" viewBox="0 0 60 76" fill="none" aria-hidden="true"><path d="M30 71Q35 43 29 26M32 55Q12 56 13 42Q26 41 32 55M33 45Q50 41 49 29Q36 29 33 45" stroke="#788766" stroke-width="1.6"/><g fill="#dca99a" stroke="#ae756b" stroke-width=".6"><ellipse cx="29" cy="15" rx="6" ry="10"/><ellipse cx="21" cy="20" rx="6" ry="10" transform="rotate(-60 21 20)"/><ellipse cx="36" cy="21" rx="6" ry="10" transform="rotate(60 36 21)"/><ellipse cx="25" cy="27" rx="6" ry="9" transform="rotate(25 25 27)"/><ellipse cx="34" cy="27" rx="6" ry="9" transform="rotate(-25 34 27)"/></g><circle cx="29" cy="22" r="4" fill="#c8a65f"/></svg>
+      <div class="eyebrow">Tú + yo + un poquito de arte</div>
+      <h1>¿Una cita<br><em>para crear juntos?</em></h1>
+      <p class="intro">Amor, ¿qué tal si pintamos algo juntos<br>y pasamos una tarde bonita?</p>
+      <p class="note">Tengo estas tres ideas para nosotros ♡</p>
+    </section>
+    <div class="divider" aria-hidden="true">✧</div>
+    <section aria-labelledby="plan-heading">
+      <div class="section-head"><span class="number">01</span><h2 id="plan-heading">¿Qué pintamos, amor?</h2><span class="hint">Elige tu favorito</span></div>
+      <div class="choices">
+        <button class="choice" type="button" data-plan="cajita" aria-pressed="false"><span class="check" aria-hidden="true">✓</span>
+          <svg class="art" viewBox="0 0 380 190" fill="none" aria-hidden="true">
+            <ellipse cx="191" cy="169" rx="104" ry="10" fill="#d8dac5"/>
+            <!-- Open wooden flower crate, with three painted slats on each side. -->
+            <path d="m104 77 103-27 74 36-106 31z" fill="#d7d4bd" stroke="#b8b6a0"/>
+            <path d="m114 79 92-23 64 30-94 26z" fill="#a6ac90"/>
+            <path d="m114 79 62 29v44l-62-31z" fill="#c6c9b2"/>
+            <path d="m176 108 94-22v44l-94 22z" fill="#b4baa0"/>
+            <g fill="#e8e5d7" stroke="#c2beac" stroke-linejoin="round">
+              <path d="m106 78 10 5v68l-10-5z"/><path d="m167 108 11 5v64l-11-5z"/>
+              <path d="m104 77 72 35v16l-72-35z"/><path d="m104 103 72 35v15l-72-35z"/><path d="m104 128 72 35v15l-72-35z"/>
+            </g>
+            <g fill="#faf7ec" stroke="#c9c5b2" stroke-linejoin="round">
+              <path d="m176 111 11-3v67l-11 3z"/><path d="m271 85 10-3v65l-10 3z"/>
+              <path d="m176 112 105-30v16l-105 30z"/><path d="m176 138 105-30v15l-105 30z"/><path d="m176 163 105-30v15l-105 30z"/>
+            </g>
+            <g stroke="#d5d0bd" stroke-width=".8" opacity=".8"><path d="m113 84 47 23m-44 5 43 21m-44 5 45 22m29-41 78-22m-76 48 76-22m-76 47 76-22"/></g>
+            <g fill="#b9b39f"><circle cx="181" cy="119" r="1.1"/><circle cx="276" cy="92" r="1.1"/><circle cx="181" cy="145" r="1.1"/><circle cx="276" cy="118" r="1.1"/><circle cx="181" cy="170" r="1.1"/><circle cx="276" cy="143" r="1.1"/></g>
+            <path d="m298 157 24-85" stroke="#7c886b" stroke-width="7" stroke-linecap="round"/><path d="m322 72 4-14" stroke="#bd9c64" stroke-width="7"/><path d="m326 58 5-16q-13 6-10 15" fill="#79634c"/>
+            <path d="M57 161q19-13 28-34m-14 20q-16-1-14-12 12-1 14 12m7-8q13 3 15-8-10-4-15 8" stroke="#889578" fill="#a5ae90" stroke-width="1.3"/>
+            <g fill="#d6a395"><ellipse cx="86" cy="117" rx="5" ry="8"/><ellipse cx="79" cy="122" rx="5" ry="8" transform="rotate(-60 79 122)"/><ellipse cx="93" cy="122" rx="5" ry="8" transform="rotate(60 93 122)"/><ellipse cx="82" cy="129" rx="5" ry="7" transform="rotate(30 82 129)"/><ellipse cx="90" cy="129" rx="5" ry="7" transform="rotate(-30 90 129)"/></g><circle cx="86" cy="123" r="3" fill="#c5a162"/>
+          </svg>
+          <div class="card-copy"><span class="tag">Plan 01 · ¿Te acuerdas de esas flores?</span><h3>La cajita de tus flores</h3><p>¿Pintamos y decoramos la cajita de madera de las flores? Ahora le damos nuestro toque juntos.</p></div>
+        </button>
+        <button class="choice" type="button" data-plan="cuadritos" aria-pressed="false"><span class="check" aria-hidden="true">✓</span>
+          <svg class="art" viewBox="0 0 380 190" fill="none" aria-hidden="true"><ellipse cx="192" cy="164" rx="116" ry="9" fill="#ded0c0"/><g transform="rotate(-8 141 98)"><path d="M87 40h108v119H87z" fill="#c29b76"/><path d="M93 46h96v107H93z" fill="#fffbef"/><path d="M98 122q20-41 43-9 24-29 42 6v28H98z" fill="#aab393"/><path d="M98 136q35-30 85-1v12H98z" fill="#76876a"/><circle cx="163" cy="71" r="13" fill="#d9b36d"/><path d="M107 83q10-9 18 0m-6 9q9-7 15 0" stroke="#9ca892" stroke-width="1.5"/></g><g transform="rotate(9 244 105)"><path d="M193 49h104v114H193z" fill="#c29b76"/><path d="M199 55h92v102H199z" fill="#fffbef"/><path d="M240 142V91m0 36-15-16m15 8 17-19" stroke="#819471" stroke-width="2"/><path d="M239 128q-28 3-20-17 14 1 20 17m3-9q26 0 20-20-15 3-20 20" fill="#9eab86"/><g fill="#c98e82"><ellipse cx="242" cy="78" rx="7" ry="12"/><ellipse cx="232" cy="86" rx="7" ry="12" transform="rotate(-60 232 86)"/><ellipse cx="251" cy="86" rx="7" ry="12" transform="rotate(60 251 86)"/><ellipse cx="236" cy="96" rx="7" ry="11" transform="rotate(30 236 96)"/><ellipse cx="248" cy="96" rx="7" ry="11" transform="rotate(-30 248 96)"/></g><circle cx="242" cy="88" r="5" fill="#d4b46f"/></g><path d="m71 163 26-66" stroke="#ac7567" stroke-width="5" stroke-linecap="round"/><path d="m97 97 4-12" stroke="#bea06c" stroke-width="5"/><path d="m101 85 4-11q-9 2-8 10" fill="#6e7b60"/></svg>
+          <div class="card-copy"><span class="tag">Plan 02 · Dos obras, un amor</span><h3>Dos cuadritos</h3><p>Comprar dos cuadritos y pintar uno cada quien, acompañados y sin prisa.</p></div>
+        </button>
+        <button class="choice" type="button" data-plan="pavo" aria-pressed="false"><span class="check" aria-hidden="true">✓</span>
+          <svg class="art" viewBox="0 0 380 190" fill="none" aria-hidden="true">
+            <ellipse cx="192" cy="169" rx="100" ry="9" fill="#cfdacb"/>
+            <g transform="rotate(-5 190 95)">
+              <path d="M113 23h154v143H113z" fill="#c29b76"/><path d="M120 30h140v129H120z" fill="#fffbef"/>
+              <g fill="#8ca48a" stroke="#658574" stroke-width="1">
+                <ellipse cx="159" cy="109" rx="13" ry="38" transform="rotate(-58 159 109)"/><ellipse cx="170" cy="93" rx="13" ry="40" transform="rotate(-32 170 93)"/><ellipse cx="190" cy="86" rx="13" ry="42"/>
+              </g>
+              <g fill="#f7f3e7" stroke="#b6bcaa" stroke-width="1" stroke-dasharray="3 3"><ellipse cx="210" cy="93" rx="13" ry="40" transform="rotate(32 210 93)"/><ellipse cx="222" cy="109" rx="13" ry="38" transform="rotate(58 222 109)"/></g>
+              <g fill="#d5bb78"><ellipse cx="139" cy="95" rx="7" ry="9" transform="rotate(-58 139 95)"/><ellipse cx="155" cy="71" rx="7" ry="9" transform="rotate(-32 155 71)"/><ellipse cx="190" cy="59" rx="7" ry="9"/></g>
+              <g fill="#437e85"><circle cx="139" cy="95" r="4"/><circle cx="155" cy="71" r="4"/><circle cx="190" cy="59" r="4"/></g>
+              <g stroke="#c8c1a1"><ellipse cx="226" cy="71" rx="7" ry="9" transform="rotate(32 226 71)"/><ellipse cx="243" cy="95" rx="7" ry="9" transform="rotate(58 243 95)"/></g>
+              <path d="M179 134q-8-12 5-25l1-18q-1-12 9-12 12 1 7 12l-3 19q18 23-1 29z" fill="#467f89"/><circle cx="196" cy="85" r="1.5" fill="#263f43"/><path d="m201 86 7 3-8 2" fill="#c4a267"/><path d="m191 79-4-8m7 8v-9m2 9 5-8" stroke="#467f89" stroke-width="1.5"/><path d="m186 138-2 9m11-9 2 9m-16 0h7m6 0h7" stroke="#a88b64" stroke-width="1.5"/>
+            </g>
+            <path d="m286 158 20-80" stroke="#b87f73" stroke-width="6" stroke-linecap="round"/><path d="m306 78 3-13" stroke="#c4a267" stroke-width="6"/><path d="m309 65 4-13q-10 4-9 12" fill="#467f89"/>
+          </svg>
+          <div class="card-copy"><span class="tag">Plan 03 · A seguir creando</span><h3>El cuadrito del pavo real</h3><p>Seguir pintando juntos el cuadrito del pavo real y darle un poquito más de color, entre pláticas y risas.</p></div>
+        </button>
+      </div>
+    </section>
+    <section class="series-section" aria-labelledby="series-heading">
+      <div class="section-head"><span class="number">02</span><h2 id="series-heading">Y para completar la cita…</h2></div>
+      <div class="series"><img class="poster-photo" src="img/anne.png" alt="Anne y Gilbert en el póster de Anne with an E" width="407" height="570"><div><h3>¿Vemos Anne juntitos?</h3><p>Unos capítulos, premios<br>tu y yo juntos. ¿Te apuntas?</p><div class="pills"><button class="pill" type="button" data-series="yes" aria-pressed="false">Sí, me encantaría ♡</button><button class="pill" type="button" data-series="later" aria-pressed="false">La dejamos para otra cita</button></div></div></div>
+    </section>
+    <div class="send-area"><p class="summary" id="summary" aria-live="polite">Solo faltan tus dos elecciones ♡</p><button class="send" id="send" type="button"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.3 7.9L3 21l1.6-4.7A9 9 0 1 1 21 11.5Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 7.5c0 4.2 4.3 8.5 8.5 8.5l1-2.5-3-1-1 1c-1.5-.6-2.9-2-3.5-3.5l1-1-1-3z" fill="currentColor" transform="translate(0 1) scale(.9)"/></svg>Enviarte mi respuesta <span aria-hidden="true">↗</span></button><p class="privacy">Se abrirá WhatsApp con tu mensajito listo para enviar.</p></div>
+    <footer>Mi parte favorita de cualquier plan <span>siempre eres tú. ♡</span></footer>
+  </main>
+  <script>
+    const phone = '50248704458';
+    let plan = null, series = null;
+    const summary = document.getElementById('summary');
+    function update(){summary.classList.remove('error');summary.textContent=plan&&series?`${plan==='cajita'?'Nuestra cajita':plan==='pavo'?'Nuestro pavo real':'Nuestros cuadritos'} + ${series==='yes'?'Anne y abrazos':'tiempo juntitos'} = una cita bonita ♡`:plan?'¿Y unos capítulos de Anne? Elige una opción ♡':series?'Elige también qué te gustaría pintar ♡':'Solo faltan tus dos elecciones ♡';}
+    document.querySelectorAll('[data-plan]').forEach(button=>button.addEventListener('click',()=>{plan=button.dataset.plan;document.querySelectorAll('[data-plan]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));update();}));
+    document.querySelectorAll('[data-series]').forEach(button=>button.addEventListener('click',()=>{series=button.dataset.series;document.querySelectorAll('[data-series]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));update();}));
+    document.getElementById('send').addEventListener('click',()=>{
+      if(!plan||!series){summary.textContent=!plan?'Amor, elige primero qué vamos a pintar ♡':'Elige si vemos Anne en esta cita ♡';summary.classList.add('error');document.querySelector(!plan?'[data-plan]':'[data-series]').focus();return;}
+      const message=`Amor, ¡sí quiero una cita contigo! 💌\n\n${plan==='cajita'?'🎨 Quiero que pintemos y decoremos juntos la cajita de madera de las flores que me regalaste.':plan==='pavo'?'🎨 Quiero que sigamos pintando juntos el cuadrito del pavo real.':'🎨 Quiero que compremos dos cuadritos y pintemos juntos, uno cada quien.'}\n\n${series==='yes'?'🌿 Y sí, veamos Anne with an E juntitos':'🌿 Dejemos Anne with an E para otra cita; esta vez quiero pintar contigo.'}\n\nMi parte favorita del plan eres tú. 🤍`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
